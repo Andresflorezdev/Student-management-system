@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+    color-scheme: light;
+    --app-bg: #f8fafc;
+    --app-fg: #0f172a;
+    --app-surface: rgba(255, 255, 255, 0.88);
+    --app-border: rgba(148, 163, 184, 0.25);
+}
+
+:root.dark {
+    color-scheme: dark;
+    --app-bg: #020617;
+    --app-fg: #e2e8f0;
+    --app-surface: rgba(15, 23, 42, 0.9);
+    --app-border: rgba(51, 65, 85, 0.6);
+}
+
+/* Smooth transition when toggling theme */
+html {
+    background-color: var(--app-bg);
+}
+
+html,
+body {
+    background-color: var(--app-bg);
+    color: var(--app-fg);
+    transition: background-color 220ms ease, color 220ms ease;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}
